@@ -135,15 +135,35 @@
   justify-content: center;
 
   .confirm-cancel {
-    @extend .btn;
-    @extend .btn--ghost;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     padding: 9px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+    background: transparent;
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    &:hover { background: var(--accent-light); color: var(--accent); }
   }
 
   .confirm-ok {
-    @extend .btn;
-    @extend .btn--danger;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     padding: 9px 22px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all var(--transition);
+    background: transparent;
+    color: #dc2626;
+    border: 1px solid #dc2626;
+    &:hover { background: #dc2626; color: #fff; }
   }
 }
 
