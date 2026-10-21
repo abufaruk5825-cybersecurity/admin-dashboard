@@ -1,0 +1,5 @@
+/* 
+ * Dark mode is now handled via CSS custom properties in index.css.
+ * The [data-theme="dark"] attribute is set on <html> by DarkModeContext.
+ * This file is kept for backward compatibility but all styles live in index.css.
+ */

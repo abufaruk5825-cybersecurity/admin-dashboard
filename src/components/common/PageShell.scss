@@ -1,0 +1,213 @@
+.page-shell {
+  padding: 24px;
+  min-height: calc(100vh - 56px);
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  &__title {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 4px 0 0;
+  }
+
+  &__action {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  &__body { width: 100%; }
+}
+
+/* ── Card ─────────────────────────────────────────── */
+.ps-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+/* ── Badge ────────────────────────────────────────── */
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+
+  &--green  { color: var(--badge-green-text);  background: var(--badge-green-bg); }
+  &--yellow { color: var(--badge-yellow-text); background: var(--badge-yellow-bg); }
+  &--red    { color: var(--badge-red-text);    background: var(--badge-red-bg); }
+  &--gray   { color: var(--text-muted);        background: var(--accent-light); }
+}
+
+/* ── Buttons ──────────────────────────────────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: 1px solid transparent;
+
+  &--primary {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    &:hover { opacity: 0.88; }
+  }
+
+  &--outline {
+    background: transparent;
+    color: var(--accent);
+    border-color: var(--accent);
+    &:hover { background: var(--accent); color: #fff; }
+  }
+
+  &--danger {
+    background: transparent;
+    color: #dc2626;
+    border-color: #dc2626;
+    &:hover { background: #dc2626; color: #fff; }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: var(--text-secondary);
+    border-color: var(--border);
+    &:hover { background: var(--accent-light); color: var(--accent); }
+  }
+}
+
+/* ── Confirm dialog ───────────────────────────────── */
+.confirm-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.confirm-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 32px;
+  max-width: 360px;
+  width: 90%;
+  box-shadow: var(--shadow-strong);
+
+  p {
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: 22px;
+    line-height: 1.5;
+    text-align: center;
+  }
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+
+  .confirm-cancel {
+    @extend .btn;
+    @extend .btn--ghost;
+    padding: 9px 22px;
+  }
+
+  .confirm-ok {
+    @extend .btn;
+    @extend .btn--danger;
+    padding: 9px 22px;
+  }
+}
+
+/* ── Toast ────────────────────────────────────────── */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 300;
+  box-shadow: var(--shadow-strong);
+  animation: slideUp 0.3s ease;
+
+  &--success { background: var(--badge-green-bg);  color: var(--badge-green-text); border: 1px solid var(--badge-green-text); }
+  &--error   { background: var(--badge-red-bg);    color: var(--badge-red-text);   border: 1px solid var(--badge-red-text); }
+  &--info    { background: var(--accent-light);    color: var(--accent);           border: 1px solid var(--accent); }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ── Form shared styles ───────────────────────────── */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 28px;
+
+  @media (max-width: 600px) { grid-template-columns: 1fr; }
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  label {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--text-secondary);
+  }
+
+  input, select, textarea {
+    padding: 10px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--input-bg);
+    color: var(--text-primary);
+    font-size: 14px;
+    outline: none;
+    transition: border-color var(--transition);
+    font-family: inherit;
+
+    &:focus { border-color: var(--accent); }
+    &::placeholder { color: var(--text-muted); }
+  }
+
+  .field-error {
+    font-size: 12px;
+    color: #dc2626;
+    margin-top: 2px;
+  }
+}

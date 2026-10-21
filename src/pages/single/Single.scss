@@ -1,0 +1,111 @@
+.single-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .top {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .left {
+      flex: 1;
+      min-width: 260px;
+      background-color: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+      position: relative;
+      transition: background-color var(--transition), border-color var(--transition);
+
+      .editButton {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        padding: 5px 12px;
+        font-size: 12px;
+        font-weight: 600;
+        color: var(--accent);
+        background-color: var(--accent-light);
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color var(--transition);
+        &:hover { background-color: var(--accent-hover); }
+      }
+
+      .title {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        margin-bottom: 16px;
+      }
+
+      .item {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+
+        .itemImg {
+          width: 90px;
+          height: 90px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 3px solid var(--border);
+        }
+
+        .details {
+          .itemTitle {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+          }
+
+          .detailItem {
+            margin-bottom: 8px;
+            font-size: 14px;
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+          }
+
+          .itemKey {
+            font-weight: 600;
+            color: var(--text-muted);
+          }
+
+          .itemValue {
+            color: var(--text-primary);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+
+    .right {
+      flex: 2;
+      min-width: 0;
+    }
+  }
+
+  .bottom {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    overflow-x: auto;
+    transition: background-color var(--transition), border-color var(--transition);
+
+    .title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+    }
+  }
+}
