@@ -51,7 +51,7 @@ export const userColumns = [
 export const userRows = [
   {
     id: 1,
-    username: "Jon Snow",
+    username: "mama abdu",
     img: "https://i.pravatar.cc/150?img=12",
     status: "active",
     email: "jonsnow@gmail.com",
@@ -67,7 +67,7 @@ export const userRows = [
   },
   {
     id: 3,
-    username: "Cersei Lannister",
+    username: "mahir ali",
     img: "https://i.pravatar.cc/150?img=44",
     status: "pending",
     email: "cersei@gmail.com",
@@ -83,7 +83,7 @@ export const userRows = [
   },
   {
     id: 5,
-    username: "Daenerys Targaryen",
+    username: "Almaz Kebere",
     img: "https://i.pravatar.cc/150?img=49",
     status: "passive",
     email: "daenerys@gmail.com",
@@ -91,7 +91,7 @@ export const userRows = [
   },
   {
     id: 6,
-    username: "Melisandre",
+    username: "Abdi Mohammed",
     img: "https://i.pravatar.cc/150?img=45",
     status: "active",
     email: "melisandre@gmail.com",
@@ -99,7 +99,7 @@ export const userRows = [
   },
   {
     id: 7,
-    username: "Ferrara Clifford",
+    username: "Biniam Alemu",
     img: "https://i.pravatar.cc/150?img=11",
     status: "pending",
     email: "ferrara@gmail.com",
@@ -115,7 +115,7 @@ export const userRows = [
   },
   {
     id: 9,
-    username: "Roxie Harvey",
+    username: "Nuru Ahmed",
     img: "https://i.pravatar.cc/150?img=16",
     status: "passive",
     email: "roxie@gmail.com",

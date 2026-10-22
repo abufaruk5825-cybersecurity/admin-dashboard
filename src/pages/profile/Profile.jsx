@@ -5,8 +5,8 @@ import { useToast } from '../../hooks/useToast';
 import '../../components/common/PageShell.scss';
 
 const DEMO_PROFILE = {
-  name:    'Jane Doe',
-  email:   'janedo@gmail.com',
+  name:    'Aster awek',
+  email:   'Aster87@gmail.com',
   phone:   '+251 987 654',
   role:    'Administrator',
   address: 'Kocha, Addis Ababa',

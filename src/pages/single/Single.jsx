@@ -17,7 +17,7 @@ const Single = () => (
           <img src="https://i.pravatar.cc/150?img=47" alt="user" className="itemImg"/>
           <div className="details">
             <h1 className="itemTitle">Jane Doe</h1>
-            <div className="detailItem"><span className="itemKey">Email:</span><span className="itemValue">janedo@gmail.com</span></div>
+            <div className="detailItem"><span className="itemKey">Email:</span><span className="itemValue">Aster@gmail.com</span></div>
             <div className="detailItem"><span className="itemKey">Phone:</span><span className="itemValue">+251 987 654</span></div>
             <div className="detailItem"><span className="itemKey">Address:</span><span className="itemValue">Kocha, Addis Ababa</span></div>
             <div className="detailItem"><span className="itemKey">Country:</span><span className="itemValue">Ethiopia</span></div>
